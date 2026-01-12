@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --blue: #003366;
+        --yellow: #ffd700;
+        --yellow-light: #fff176;
+        --yellow-dark: #fbc02d;
+      }
+
+      * {
+        font-family: "Inter", sans-serif;
+      }
+
+      /* Hamburger menu animation */
+      .hamburger-line {
+        transition: all 0.3s ease;
+      }
+
+      .hamburger.active .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+      }
+
+      .hamburger.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+      }
+
+      /* Mobile menu animation */
+      .mobile-menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+      }
+
+      .mobile-menu.open {
+        max-height: 500px;
+      }
+
+      /* Placeholder for images */
+      .image-placeholder {
+        background: linear-gradient(
+          45deg,
+          #f1f1f1 25%,
+          #e0e0e0 25%,
+          #e0e0e0 50%,
+          #f1f1f1 50%,
+          #f1f1f1 75%,
+          #e0e0e0 75%,
+          #e0e0e0
+        );
+        background-size: 20px 20px;
+        border: 2px dashed #cbd5e0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #718096;
+        font-weight: 500;
+      }
+
+      .image-placeholder i {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-blue-900 text-white shadow-lg">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <div class="text-xl font-bold">
+              <div class="text-white">KOKETJO KAMOGELO</div>
+              <div class="text-yellow-400">TRADING ENTERPRISE</div>
+            </div>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex items-center space-x-8">
+            <a
+              href="index.html"
+              class="hover:text-yellow-400 transition duration-300 font-medium"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-yellow-400 hover:text-yellow-300 transition duration-300 font-medium"
+              >About</a
+            >
+            <a
+              href="services.html"
+              class="hover:text-yellow-400 transition duration-300 font-medium"
+              >Services</a
+            >
+            <a
+              href="contact.html"
+              class="hover:text-yellow-400 transition duration-300 font-medium"
+              >Contact</a
+            >
+            <a
+              href="tel:+2754838028"
+              class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center"
+            >
+              <i class="fas fa-phone mr-2"></i> 24/7 EMERGENCY
+            </a>
+          </nav>
+
+          <!-- Hamburger Menu Button (Mobile) -->
+          <button
+            id="hamburger-btn"
+            class="md:hidden hamburger flex flex-col justify-center items-center w-10 h-10 space-y-1.5"
+          >
+            <span class="hamburger-line block w-8 h-1 bg-white rounded"></span>
+            <span class="hamburger-line block w-8 h-1 bg-white rounded"></span>
+            <span class="hamburger-line block w-8 h-1 bg-white rounded"></span>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden mt-4">
+          <div class="flex flex-col space-y-4 pb-4">
+            <a
+              href="index.html"
+              class="hover:text-yellow-400 transition duration-300 font-medium py-2 border-b border-blue-800"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-yellow-400 hover:text-yellow-300 transition duration-300 font-medium py-2 border-b border-blue-800"
+              >About</a
+            >
+            <a
+              href="services.html"
+              class="hover:text-yellow-400 transition duration-300 font-medium py-2 border-b border-blue-800"
+              >Services</a
+            >
+            <a
+              href="contact.html"
+              class="hover:text-yellow-400 transition duration-300 font-medium py-2 border-b border-blue-800"
+              >Contact</a
+            >
+            <a
+              href="tel:+2754838028"
+              class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center mt-4"
+            >
+              <i class="fas fa-phone mr-2"></i> 24/7 EMERGENCY CALL
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Hero Section -->
+    <section
+      class="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-16 md:py-24"
+    >
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Our Story & Journey
+          </h1>
+          <div class="w-24 h-1.5 bg-yellow-500 mx-auto mb-8"></div>
+          <p class="text-xl md:text-2xl mb-6 max-w-3xl mx-auto">
+            Dedicated to the principle of
+            <span class="text-yellow-400 font-semibold"
+              >Botho Arethusaneng</span
+            >
+            since 2016
+          </p>
+          <p class="text-gray-300 max-w-2xl mx-auto">
+            We combine management excellence, high-quality products, and
+            exceptional customer service to foster SMME development.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Overview Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-12">
+          <!-- Image Placeholder 1 - Company/Office Photos -->
+          <div class="lg:w-1/2">
+            <div class="image-placeholder rounded-xl h-96 w-full">
+              <div class="text-center">
+                <i class="fas fa-building"></i>
+                <p>Company Office Photos</p>
+                <p class="text-sm mt-2">Replace with your office images</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Company Overview Text -->
+          <div class="lg:w-1/2">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
+              Company Overview
+            </h2>
+            <div class="w-20 h-1.5 bg-yellow-500 mb-8"></div>
+            <p class="text-gray-700 text-lg mb-6">
+              Koketjo Kamogelo Trading Enterprise (Pty) Ltd was founded and
+              established in 2016 in Mokopane. Our company is dedicated to the
+              principle of
+              <span class="font-semibold text-blue-900"
+                >Botho Arethusaneng</span
+              >
+              (working together in harmony).
+            </p>
+            <p class="text-gray-700 mb-6">
+              What makes us stand out is our unique combination of management
+              expertise, sales and distribution, high-quality innovative
+              products, and exceptional customer service. We were formed to
+              foster SMME (Small, Medium and Micro Enterprises) development
+              objectives.
+            </p>
+            <p class="text-gray-700 mb-8">
+              As a core business, we specialize in towing, mechanical services,
+              and general services. Our team consists of well-trained and
+              experienced personnel who provide quality goods and services 24
+              hours a day. Our customers are extremely important to us and
+              always come first.
+            </p>
+
+            <div
+              class="bg-blue-50 border-l-4 border-yellow-500 p-6 rounded-r-lg mb-8"
+            >
+              <p class="text-blue-900 font-medium italic">
+                "We promise to provide our clients exceptional services with a
+                personal touch."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <!-- Mission -->
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <div
+              class="bg-blue-900 text-white w-16 h-16 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-bullseye text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-blue-900 mb-4">Our Mission</h3>
+            <p class="text-gray-700 mb-6">
+              Our primary aim is to open more job opportunities for skilled
+              individuals who have been denied a chance to prove themselves. We
+              create job opportunities for local communities where our business
+              operates and empower them through social responsibility programs.
+            </p>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <i class="fas fa-check text-yellow-500 mt-1 mr-3"></i>
+                <span>Create employment for skilled individuals</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-yellow-500 mt-1 mr-3"></i>
+                <span>Support local community development</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-yellow-500 mt-1 mr-3"></i>
+                <span>Implement social responsibility programs</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Vision -->
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <div
+              class="bg-yellow-500 text-blue-900 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-eye text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-blue-900 mb-4">Our Vision</h3>
+            <p class="text-gray-700 mb-6">
+              To be a globally recognized service provider and partner to chosen
+              markets, achieving outstanding results for our clients and
+              partners through quality management programs that steer our team
+              of experts to provide service satisfaction.
+            </p>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
+                <span>Global recognition as a service provider</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
+                <span>Quality management excellence</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
+                <span>Be recognized as the most competent supplier</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Values & Principles -->
+        <div class="mt-16 bg-blue-900 text-white p-8 md:p-12 rounded-xl">
+          <h3 class="text-2xl md:text-3xl font-bold mb-6 text-center">
+            Our Values & Principles
+          </h3>
+          <div class="w-24 h-1.5 bg-yellow-500 mx-auto mb-8"></div>
+          <p class="text-xl text-center mb-10 max-w-3xl mx-auto">
+            We embrace diversity of nation, cultures, and thoughts. This
+            diversity is a major source of our strength, where each individual
+            has a unique ability and responsibility to contribute, and every
+            opportunity to participate, grow, and develop.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center">
+              <div
+                class="bg-yellow-500 text-blue-900 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-users"></i>
+              </div>
+              <h4 class="text-xl font-bold mb-3">Diversity & Inclusion</h4>
+              <p class="text-gray-300">
+                Embracing different cultures and perspectives as our strength
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div
+                class="bg-yellow-500 text-blue-900 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-handshake"></i>
+              </div>
+              <h4 class="text-xl font-bold mb-3">Community Focus</h4>
+              <p class="text-gray-300">
+                Prioritizing local community development and empowerment
+              </p>
+            </div>
+
+            <div class="text-center">
+              <div
+                class="bg-yellow-500 text-blue-900 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h4 class="text-xl font-bold mb-3">Growth & Development</h4>
+              <p class="text-gray-300">
+                Creating opportunities for personal and professional advancement
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workshop & Operations Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-blue-900 mb-12 text-center"
+        >
+          Our Operations & Facilities
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <!-- Image Placeholder 2 - Workshop Photos -->
+          <div class="image-placeholder rounded-xl h-80">
+            <div class="text-center">
+              <i class="fas fa-tools"></i>
+              <p>Workshop & Equipment Photos</p>
+              <p class="text-sm mt-2">Replace with your workshop images</p>
+            </div>
+          </div>
+
+          <!-- Image Placeholder 3 - Vehicle/Towing Photos -->
+          <div class="image-placeholder rounded-xl h-80">
+            <div class="text-center">
+              <i class="fas fa-truck-pickup"></i>
+              <p>Vehicle & Towing Fleet Photos</p>
+              <p class="text-sm mt-2">Replace with your vehicle images</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Image Placeholder 4 - Team/Staff Photos -->
+          <div class="image-placeholder rounded-xl h-80">
+            <div class="text-center">
+              <i class="fas fa-user-hard-hat"></i>
+              <p>Our Team & Staff Photos</p>
+              <p class="text-sm mt-2">Replace with your team images</p>
+            </div>
+          </div>
+
+          <!-- Image Placeholder 5 - Projects/Work Photos -->
+          <div class="image-placeholder rounded-xl h-80">
+            <div class="text-center">
+              <i class="fas fa-hard-hat"></i>
+              <p>Projects & Work Site Photos</p>
+              <p class="text-sm mt-2">Replace with your project images</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Caption -->
+        <div class="mt-12 text-center max-w-3xl mx-auto">
+          <p class="text-gray-600 italic">
+            Our facilities in Mokopane are equipped with modern tools and
+            machinery to handle all types of towing, mechanical, construction,
+            and electrical projects. We maintain a clean, safe, and organized
+            working environment for our team and clients.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Policies Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-blue-900 mb-12 text-center"
+        >
+          Our Policies & Commitments
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Health & Safety Policy -->
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <div
+              class="bg-red-100 text-red-700 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-shield-alt text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-blue-900 mb-4">
+              Health & Safety Policy
+            </h3>
+            <p class="text-gray-700 mb-4">
+              Koketjo Kamogelo Trading Enterprise implements procedures to
+              prevent injury or loss and assure the health and safety of our
+              employees.
+            </p>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                <span
+                  >Management prioritizes incident prevention and employee
+                  health</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                <span>Compliance with OHS Act requirements</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                <span>Employee cooperation to minimize losses</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                <span>Active participation in accident prevention</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Environmental Policy -->
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <div
+              class="bg-green-100 text-green-700 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-leaf text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-blue-900 mb-4">
+              Environmental Policy
+            </h3>
+            <p class="text-gray-700 mb-4">
+              We emphasize conservation of our environment and the well-being of
+              our communities and employees.
+            </p>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <i class="fas fa-recycle text-green-500 mt-1 mr-3"></i>
+                <span
+                  >Avoid activities detrimental to the natural environment</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-recycle text-green-500 mt-1 mr-3"></i>
+                <span>Rehabilitate impacted environments when possible</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-recycle text-green-500 mt-1 mr-3"></i>
+                <span>Designated smoking areas and proper waste disposal</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-recycle text-green-500 mt-1 mr-3"></i>
+                <span>Compliance with client waste management policies</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Quality Policy -->
+          <div class="bg-white p-8 rounded-xl shadow-lg">
+            <div
+              class="bg-blue-100 text-blue-700 w-16 h-16 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-award text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-blue-900 mb-4">
+              Quality Policy
+            </h3>
+            <p class="text-gray-700 mb-4">
+              We commit to providing the highest quality service to meet
+              stakeholder expectations through our dynamic quality management
+              system.
+            </p>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
+                <span>Meeting national and provincial standards</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
+                <span>Working toward ISO 9001 implementation</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
+                <span>Thorough preparation, application, and inspections</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-star text-yellow-500 mt-1 mr-3"></i>
+                <span>Professionalism, reliability, and accountability</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trade References Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-blue-900 mb-12 text-center"
+        >
+          Our Trade References
+        </h2>
+
+        <div class="max-w-4xl mx-auto">
+          <!-- Mogalakwena Local Municipality -->
+          <div
+            class="bg-gray-50 p-8 rounded-xl mb-8 border-l-4 border-yellow-500"
+          >
+            <h3 class="text-2xl font-bold text-blue-900 mb-4">
+              Mogalakwena Local Municipality
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="text-lg font-semibold text-gray-800 mb-2">
+                  Services Provided:
+                </h4>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                    <span>Water catering</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                    <span>Plant hire</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                    <span>Road and storm water projects</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                    <span>Bush clearing</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold text-gray-800 mb-2">
+                  Additional Services:
+                </h4>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                    <span>Road maintenance</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                    <span>Repair of water pumps</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                    <span>Pest fumigating</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- BS Gungisa / Anglo Mogalakwena Mine -->
+          <div
+            class="bg-gray-50 p-8 rounded-xl mb-8 border-l-4 border-yellow-500"
+          >
+            <h3 class="text-2xl font-bold text-blue-900 mb-4">
+              BS Gungisa / Anglo Mogalakwena Mine
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="text-lg font-semibold text-gray-800 mb-2">
+                  Contact:
+                </h4>
+                <p class="text-gray-700 mb-2">Mr Samuel Baloyi</p>
+                <p class="text-gray-700">
+                  <i class="fas fa-phone text-yellow-500 mr-2"></i> 015 491 9604
+                </p>
+                <p class="text-gray-700 mt-2">
+                  <strong>Service:</strong> Plant hire
+                </p>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold text-gray-800 mb-2">
+                  Additional Contacts:
+                </h4>
+                <p class="text-gray-700 mb-2">
+                  <i class="fas fa-phone text-yellow-500 mr-2"></i> 015 418 2363
+                </p>
+                <p class="text-gray-700">
+                  <strong>Services:</strong> Supply and delivery, automotive
+                  mechanical repairs, towing services
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Government Departments -->
+          <div class="bg-gray-50 p-8 rounded-xl border-l-4 border-yellow-500">
+            <h3 class="text-2xl font-bold text-blue-900 mb-4">
+              Government Department Clients
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="text-lg font-semibold text-gray-800 mb-2">
+                  Department Clients:
+                </h4>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <i class="fas fa-building text-blue-500 mr-2 mt-1"></i>
+                    <span>Department of Health</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-building text-blue-500 mr-2 mt-1"></i>
+                    <span>Department of Road Transport</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-building text-blue-500 mr-2 mt-1"></i>
+                    <span>Eskom</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold text-gray-800 mb-2">
+                  Services Provided:
+                </h4>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <i class="fas fa-tools text-yellow-500 mr-2 mt-1"></i>
+                    <span>Towing services</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-wrench text-yellow-500 mr-2 mt-1"></i>
+                    <span>Automotive mechanical repairs</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-hard-hat text-yellow-500 mr-2 mt-1"></i>
+                    <span>General construction services</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section
+      class="py-16 bg-gradient-to-r from-blue-900 to-blue-800 text-white"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Partner With Us Today
+        </h2>
+        <p class="text-xl mb-10 max-w-2xl mx-auto">
+          Experience the Koketjo Kamogelo difference - where quality, safety,
+          and community come first.
+        </p>
+        <div
+          class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6"
+        >
+          <a
+            href="services.html"
+            class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition duration-300 flex items-center"
+          >
+            <i class="fas fa-tools mr-3"></i> View Our Services
+          </a>
+          <a
+            href="contact.html"
+            class="bg-transparent border-2 border-yellow-500 hover:bg-yellow-500 hover:bg-opacity-10 text-white font-bold py-4 px-8 rounded-lg text-lg transition duration-300 flex items-center"
+          >
+            <i class="fas fa-envelope mr-3"></i> Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white pt-16 pb-8">
+      <div class="container mx-auto px-4">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12"
+        >
+          <!-- Company Info -->
+          <div>
+            <h3 class="text-2xl font-bold mb-6">
+              <span class="text-yellow-400">KOKETJO KAMOGELO</span><br />
+              TRADING ENTERPRISE
+            </h3>
+            <p class="text-gray-300 mb-6">
+              Professional multi-service solutions you can depend on 24/7.
+              Serving Mokopane and surrounding regions since 2016.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="bg-blue-800 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="bg-blue-800 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="#"
+                class="bg-blue-800 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-xl font-bold mb-6 text-yellow-400">Quick Links</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-300 hover:text-yellow-400 transition duration-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-300 hover:text-yellow-400 transition duration-300"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-300 hover:text-yellow-400 transition duration-300"
+                  >Our Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-300 hover:text-yellow-400 transition duration-300"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-yellow-400 transition duration-300"
+                  >Careers</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h3 class="text-xl font-bold mb-6 text-yellow-400">Our Services</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-yellow-400 transition duration-300"
+                  >Towing & Roadside Assistance</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-yellow-400 transition duration-300"
+                  >Road Construction</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-yellow-400 transition duration-300"
+                  >Industrial Piping</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-yellow-400 transition duration-300"
+                  >Electrical Installations</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-yellow-400 transition duration-300"
+                  >Mining Support Services</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-xl font-bold mb-6 text-yellow-400">Contact Info</h3>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <i class="fas fa-map-marker-alt text-yellow-400 mt-1 mr-3"></i>
+                <p class="text-gray-300">
+                  769 N11 Street, Tshamahansi, Mokopane, 0600
+                </p>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-envelope text-yellow-400 mr-3"></i>
+                <p class="text-gray-300">info@kktradingenterprise.co.za</p>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-phone text-yellow-400 mr-3"></i>
+                <p class="text-gray-300">015 483 8028</p>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-clock text-yellow-400 mr-3"></i>
+                <p class="text-gray-300">24/7 Emergency Assistance Available</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-blue-800 pt-8 text-center">
+          <p class="text-gray-400">
+            &copy; 2026 Koketjo Kamogelo Trading Enterprise (Pty) Ltd. All
+            Rights Reserved.
+          </p>
+          <p class="text-gray-500 text-sm mt-2">
+            Proudly serving Mokopane and surrounding communities since 2016.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        hamburgerBtn.addEventListener("click", function () {
+          // Toggle mobile menu
+          mobileMenu.classList.toggle("open");
+
+          // Toggle hamburger animation
+          hamburgerBtn.classList.toggle("active");
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = document.querySelectorAll("#mobile-menu a");
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.remove("open");
+            hamburgerBtn.classList.remove("active");
+          });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            const targetId = this.getAttribute("href");
+            if (targetId === "#" || targetId.includes(".html")) return;
+
+            e.preventDefault();
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

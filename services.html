@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services - Koketjo Kamogelo Trading Enterprise</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --blue: #003366;
+        --yellow: #ffd700;
+        --yellow-light: #fff176;
+        --yellow-dark: #fbc02d;
+      }
+
+      * {
+        font-family: "Inter", sans-serif;
+      }
+
+      /* Hamburger menu animation */
+      .hamburger-line {
+        transition: all 0.3s ease;
+      }
+
+      .hamburger.active .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+      }
+
+      .hamburger.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+      }
+
+      /* Mobile menu animation */
+      .mobile-menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+      }
+
+      .mobile-menu.open {
+        max-height: 500px;
+      }
+
+      /* Service icon styles */
+      .service-icon {
+        transition: all 0.3s ease;
+      }
+
+      .service-card:hover .service-icon {
+        transform: scale(1.1);
+        color: #ffd700;
+      }
+
+      /* Placeholder for images */
+      .image-placeholder {
+        background-size: 20px 20px;
+        border: 2px dashed #cbd5e0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #718096;
+        font-weight: 500;
+      }
+
+      .image-placeholder i {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      /* CIDB Grade Badge */
+      .cidb-badge {
+        background: linear-gradient(135deg, #ffd700 0%, #fbc02d 100%);
+        color: #003366;
+        font-weight: bold;
+      }
+
+      .hero-bg {
+        background: linear-gradient(
+            rgba(0, 51, 102, 0.75),
+            rgba(0, 51, 102, 0.8)
+          ),
+          url("/images/9.jpeg") center/cover;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-blue-900 text-white shadow-lg">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <div class="text-xl font-bold">
+              <div class="text-white">KOKETJO KAMOGELO</div>
+              <div class="text-yellow-400">TRADING ENTERPRISE</div>
+            </div>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden md:flex items-center space-x-8">
+            <a
+              href="index.html"
+              class="hover:text-yellow-400 transition duration-300 font-medium"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="hover:text-yellow-400 transition duration-300 font-medium"
+              >About</a
+            >
+            <a
+              href="services.html"
+              class="text-yellow-400 hover:text-yellow-300 transition duration-300 font-medium"
+              >Services</a
+            >
+            <a
+              href="contact.html"
+              class="hover:text-yellow-400 transition duration-300 font-medium"
+              >Contact</a
+            >
+            <a
+              href="tel:+271834838028"
+              class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center"
+            >
+              <i class="fas fa-phone mr-2"></i> 24/7 EMERGENCY
+            </a>
+          </nav>
+
+          <!-- Hamburger Menu Button (Mobile) -->
+          <button
+            id="hamburger-btn"
+            class="md:hidden hamburger flex flex-col justify-center items-center w-10 h-10 space-y-1.5"
+          >
+            <span class="hamburger-line block w-8 h-1 bg-white rounded"></span>
+            <span class="hamburger-line block w-8 h-1 bg-white rounded"></span>
+            <span class="hamburger-line block w-8 h-1 bg-white rounded"></span>
+          </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden mt-4">
+          <div class="flex flex-col space-y-4 pb-4">
+            <a
+              href="index.html"
+              class="hover:text-yellow-400 transition duration-300 font-medium py-2 border-b border-blue-800"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="hover:text-yellow-400 transition duration-300 font-medium py-2 border-b border-blue-800"
+              >About</a
+            >
+            <a
+              href="services.html"
+              class="text-yellow-400 hover:text-yellow-300 transition duration-300 font-medium py-2 border-b border-blue-800"
+              >Services</a
+            >
+            <a
+              href="contact.html"
+              class="hover:text-yellow-400 transition duration-300 font-medium py-2 border-b border-blue-800"
+              >Contact</a
+            >
+            <a
+              href="tel:+271834838028"
+              class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center mt-4"
+            >
+              <i class="fas fa-phone mr-2"></i> 24/7 EMERGENCY CALL
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Hero Section -->
+    <section class="hero-bg text-white py-16 md:py-24">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Our Comprehensive Services
+          </h1>
+          <div class="w-24 h-1.5 bg-yellow-500 mx-auto mb-8"></div>
+          <p class="text-xl md:text-2xl mb-6 max-w-3xl mx-auto">
+            Professional multi-service solutions for industrial, commercial, and
+            residential clients
+          </p>
+          <p class="text-gray-300 max-w-2xl mx-auto">
+            With
+            <span class="text-yellow-400 font-semibold"
+              >CIDB GRADE 6CE & RMI</span
+            >
+            certification and 24/7 emergency support
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Navigation -->
+    <section class="py-8 bg-white shadow-md">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="#construction"
+            class="bg-blue-50 hover:bg-blue-100 text-blue-900 font-medium py-3 px-6 rounded-lg transition duration-300 flex items-center"
+          >
+            <i class="fas fa-hard-hat mr-3"></i> Construction
+          </a>
+          <a
+            href="#electrical"
+            class="bg-blue-50 hover:bg-blue-100 text-blue-900 font-medium py-3 px-6 rounded-lg transition duration-300 flex items-center"
+          >
+            <i class="fas fa-bolt mr-3"></i> Electrical
+          </a>
+          <a
+            href="#mechanical"
+            class="bg-blue-50 hover:bg-blue-100 text-blue-900 font-medium py-3 px-6 rounded-lg transition duration-300 flex items-center"
+          >
+            <i class="fas fa-tools mr-3"></i> Mechanical
+          </a>
+          <a
+            href="#piping"
+            class="bg-blue-50 hover:bg-blue-100 text-blue-900 font-medium py-3 px-6 rounded-lg transition duration-300 flex items-center"
+          >
+            <i class="fas fa-wrench mr-3"></i> Piping
+          </a>
+          <a
+            href="#mining"
+            class="bg-blue-50 hover:bg-blue-100 text-blue-900 font-medium py-3 px-6 rounded-lg transition duration-300 flex items-center"
+          >
+            <i class="fas fa-mountain mr-3"></i> Mining
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Construction & Civil Works Section -->
+    <section id="construction" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-12 mb-16">
+          <div class="lg:w-1/2">
+            <!-- Image Placeholder 1 - Construction Projects -->
+            <div class="image-placeholder rounded-xl h-96 w-full">
+              <img src="/images/6.jpeg" alt="KK Construction Office" />
+            </div>
+          </div>
+
+          <div class="lg:w-1/2">
+            <div class="flex items-center mb-6">
+              <div
+                class="bg-blue-900 text-white w-16 h-16 rounded-full flex items-center justify-center mr-6"
+              >
+                <i class="fas fa-hard-hat text-2xl"></i>
+              </div>
+              <div>
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
+                  Construction & Civil Works
+                </h2>
+                <div
+                  class="inline-block cidb-badge py-1 px-4 rounded-full text-sm mt-2"
+                >
+                  CIDB GRADE 6CE
+                </div>
+              </div>
+            </div>
+
+            <p class="text-gray-700 text-lg mb-8">
+              We provide comprehensive construction and civil engineering
+              services with a focus on quality, safety, and timely project
+              delivery.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 class="text-xl font-bold text-blue-900 mb-4">
+                  Core Services
+                </h3>
+                <ul class="space-y-3 text-gray-700">
+                  <li class="flex items-start">
+                    <i class="fas fa-road text-yellow-500 mt-1 mr-3"></i>
+                    <span>Road Construction & Maintenance</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-building text-yellow-500 mt-1 mr-3"></i>
+                    <span>Building Construction & Paving</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-water text-yellow-500 mt-1 mr-3"></i>
+                    <span>Storm Water Management</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-tint text-yellow-500 mt-1 mr-3"></i>
+                    <span>Water Reticulation Systems</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i
+                      class="fas fa-border-style text-yellow-500 mt-1 mr-3"
+                    ></i>
+                    <span>Fencing Work & Barriers</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-blue-900 mb-4">
+                  Specialized Services
+                </h3>
+                <ul class="space-y-3 text-gray-700">
+                  <li class="flex items-start">
+                    <i class="fas fa-mountain text-yellow-500 mt-1 mr-3"></i>
+                    <span>Mining Infrastructure</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-dumpster text-yellow-500 mt-1 mr-3"></i>
+                    <span>Stone Dust Barriers</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-recycle text-yellow-500 mt-1 mr-3"></i>
+                    <span>Material Reclamation</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-wind text-yellow-500 mt-1 mr-3"></i>
+                    <span>Ventilation Wall Construction</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Construction Services Detail -->
+        <div class="bg-blue-50 p-8 rounded-xl">
+          <h3 class="text-2xl font-bold text-blue-900 mb-6 text-center">
+            Additional Construction Services
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <div class="text-yellow-500 text-2xl mb-4">
+                <i class="fas fa-tools"></i>
+              </div>
+              <h4 class="font-bold text-blue-900 mb-2">Road Works</h4>
+              <p class="text-gray-700 text-sm">
+                Complete road construction, grading, paving, and maintenance
+                services.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <div class="text-yellow-500 text-2xl mb-4">
+                <i class="fas fa-water"></i>
+              </div>
+              <h4 class="font-bold text-blue-900 mb-2">Water Systems</h4>
+              <p class="text-gray-700 text-sm">
+                Design and installation of water reticulation and storm water
+                management systems.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <div class="text-yellow-500 text-2xl mb-4">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h4 class="font-bold text-blue-900 mb-2">Safety Structures</h4>
+              <p class="text-gray-700 text-sm">
+                Construction of safety barriers, fencing, and other protective
+                structures.
+              </p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <div class="text-yellow-500 text-2xl mb-4">
+                <i class="fas fa-industry"></i>
+              </div>
+              <h4 class="font-bold text-blue-900 mb-2">Industrial Projects</h4>
+              <p class="text-gray-700 text-sm">
+                Specialized construction for mining and industrial facilities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Electrical Services Section -->
+    <section id="electrical" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-col lg:flex-row-reverse items-center gap-12 mb-16"
+        >
+          <div class="lg:w-1/2">
+            <!-- Image Placeholder 2 - Electrical Projects -->
+            <div class="image-placeholder rounded-xl h-96 w-full">
+              <img src="/images/2.jpeg" alt="Construction Projects Photos" />
+            </div>
+          </div>
+
+          <div class="lg:w-1/2">
+            <div class="flex items-center mb-6">
+              <div
+                class="bg-yellow-500 text-blue-900 w-16 h-16 rounded-full flex items-center justify-center mr-6"
+              >
+                <i class="fas fa-bolt text-2xl"></i>
+              </div>
+              <div>
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
+                  Electrical Services
+                </h2>
+                <p class="text-gray-600 mt-2">
+                  Commercial & Industrial Specialists
+                </p>
+              </div>
+            </div>
+
+            <p class="text-gray-700 text-lg mb-8">
+              We are a full commercial and industrial electrical company working
+              with both public and private sectors, providing reliable and safe
+              electrical solutions.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 class="text-xl font-bold text-blue-900 mb-4">
+                  Industrial Electrical
+                </h3>
+                <ul class="space-y-3 text-gray-700">
+                  <li class="flex items-start">
+                    <i class="fas fa-industry text-yellow-500 mt-1 mr-3"></i>
+                    <span>Industrial Electrical Installations</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-cogs text-yellow-500 mt-1 mr-3"></i>
+                    <span>New Plant Services & Maintenance</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-microchip text-yellow-500 mt-1 mr-3"></i>
+                    <span>Circuit Processing & Control Systems</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-tree text-yellow-500 mt-1 mr-3"></i>
+                    <span>Landscape Lighting Design</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-search text-yellow-500 mt-1 mr-3"></i>
+                    <span>Troubleshooting & Safety Inspections</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-blue-900 mb-4">
+                  Specialized Services
+                </h3>
+                <ul class="space-y-3 text-gray-700">
+                  <li class="flex items-start">
+                    <i class="fas fa-lightbulb text-yellow-500 mt-1 mr-3"></i>
+                    <span>Security Lighting Systems</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-plug text-yellow-500 mt-1 mr-3"></i>
+                    <span>Switchgear Installation</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-bolt text-yellow-500 mt-1 mr-3"></i>
+                    <span>Transformer Installation</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i
+                      class="fas fa-clipboard-check text-yellow-500 mt-1 mr-3"
+                    ></i>
+                    <span>Lighting Audits</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-cable-car text-yellow-500 mt-1 mr-3"></i>
+                    <span>Cable Consultancy</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Electrical Services Detail -->
+        <div class="bg-blue-900 text-white p-8 rounded-xl">
+          <h3 class="text-2xl font-bold mb-6 text-center">
+            Technical Electrical Services
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-blue-800 p-6 rounded-lg">
+              <h4 class="font-bold text-xl mb-3 flex items-center">
+                <i class="fas fa-industry mr-3 text-yellow-400"></i>
+                Industrial Installations
+              </h4>
+              <p class="text-gray-300">
+                Complete electrical systems for manufacturing plants,
+                warehouses, and industrial facilities.
+              </p>
+            </div>
+
+            <div class="bg-blue-800 p-6 rounded-lg">
+              <h4 class="font-bold text-xl mb-3 flex items-center">
+                <i class="fas fa-shield-alt mr-3 text-yellow-400"></i>
+                Safety & Compliance
+              </h4>
+              <p class="text-gray-300">
+                Regular safety inspections, compliance audits, and risk
+                assessments for electrical systems.
+              </p>
+            </div>
+
+            <div class="bg-blue-800 p-6 rounded-lg">
+              <h4 class="font-bold text-xl mb-3 flex items-center">
+                <i class="fas fa-tools mr-3 text-yellow-400"></i>
+                Maintenance & Repair
+              </h4>
+              <p class="text-gray-300">
+                Preventive maintenance, emergency repairs, and system upgrades
+                for all electrical installations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mechanical & Towing Services Section -->
+    <section id="mechanical" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-12 mb-16">
+          <div class="lg:w-1/2">
+            <!-- Image Placeholder 3 - Mechanical & Towing -->
+            <div class="image-placeholder rounded-xl h-96 w-full">
+              <img src="/images/17.jpeg" alt="Construction Projects Photos" />
+            </div>
+          </div>
+
+          <div class="lg:w-1/2">
+            <div class="flex items-center mb-6">
+              <div
+                class="bg-blue-900 text-white w-16 h-16 rounded-full flex items-center justify-center mr-6"
+              >
+                <i class="fas fa-tools text-2xl"></i>
+              </div>
+              <div>
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
+                  Mechanical & Towing Services
+                </h2>
+                <p class="text-gray-600 mt-2">
+                  24/7 Emergency Roadside Assistance
+                </p>
+              </div>
+            </div>
+
+            <p class="text-gray-700 text-lg mb-8">
+              Our expert mechanical services specialize in towing and fixing
+              cars. We offer 24/7 emergency towing and comprehensive automotive
+              repairs you can trust.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 class="text-xl font-bold text-blue-900 mb-4">
+                  Emergency Towing
+                </h3>
+                <ul class="space-y-3 text-gray-700">
+                  <li class="flex items-start">
+                    <i
+                      class="fas fa-truck-pickup text-yellow-500 mt-1 mr-3"
+                    ></i>
+                    <span>24/7 Emergency Towing Service</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-road text-yellow-500 mt-1 mr-3"></i>
+                    <span>Roadside Assistance</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-car-crash text-yellow-500 mt-1 mr-3"></i>
+                    <span>Accident Recovery</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-gas-pump text-yellow-500 mt-1 mr-3"></i>
+                    <span>Fuel Delivery</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-key text-yellow-500 mt-1 mr-3"></i>
+                    <span>Lockout Services</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-bold text-blue-900 mb-4">
+                  Mechanical Repairs
+                </h3>
+                <ul class="space-y-3 text-gray-700">
+                  <li class="flex items-start">
+                    <i class="fas fa-engine text-yellow-500 mt-1 mr-3"></i>
+                    <span>Engine Repairs & Rebuilds</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-car-brake text-yellow-500 mt-1 mr-3"></i>
+                    <span>Brake Services & Repairs</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-cogs text-yellow-500 mt-1 mr-3"></i>
+                    <span>Transmission Fixes</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-tire text-yellow-500 mt-1 mr-3"></i>
+                    <span>Tire Replacement & Repair</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-car-battery text-yellow-500 mt-1 mr-3"></i>
+                    <span>Battery Services</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Mechanical Services -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gray-50 p-8 rounded-xl border-l-4 border-yellow-500">
+            <h3 class="text-xl font-bold text-blue-900 mb-4">
+              Diagnostics & Maintenance
+            </h3>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <i class="fas fa-search text-yellow-500 mt-1 mr-3"></i>
+                <span>Advanced Vehicle Diagnostics</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-oil-can text-yellow-500 mt-1 mr-3"></i>
+                <span>Oil Changes & Fluid Services</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-car text-yellow-500 mt-1 mr-3"></i>
+                <span>Suspension System Repairs</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-smog text-yellow-500 mt-1 mr-3"></i>
+                <span>Exhaust System Repairs</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-clipboard-check text-yellow-500 mt-1 mr-3"></i>
+                <span>Preventive Maintenance Programs</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-gray-50 p-8 rounded-xl border-l-4 border-blue-900">
+            <h3 class="text-xl font-bold text-blue-900 mb-4">Our Commitment</h3>
+            <p class="text-gray-700 mb-4">
+              Trust our experienced team for reliable, prompt, and professional
+              automotive care. We promise exceptional service with a personal
+              touch.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <i class="fas fa-clock text-yellow-500 mt-1 mr-3"></i>
+                <div>
+                  <h4 class="font-bold text-blue-900">24/7 Availability</h4>
+                  <p class="text-gray-700 text-sm">
+                    Round-the-clock emergency services
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-award text-yellow-500 mt-1 mr-3"></i>
+                <div>
+                  <h4 class="font-bold text-blue-900">Certified Technicians</h4>
+                  <p class="text-gray-700 text-sm">
+                    Skilled, experienced professionals
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-dollar-sign text-yellow-500 mt-1 mr-3"></i>
+                <div>
+                  <h4 class="font-bold text-blue-900">Competitive Pricing</h4>
+                  <p class="text-gray-700 text-sm">
+                    Affordable, transparent pricing
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 p-8 rounded-xl border-l-4 border-yellow-500">
+            <!-- Image Placeholder 4 - Workshop -->
+            <div class="image-placeholder rounded-xl h-64 w-full mb-6">
+              <div class="text-center">
+                <img src="/images/15.jpeg" alt="KK Mechanical Workshop" />
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-blue-900 mb-4">Our Workshop</h3>
+            <p class="text-gray-700">
+              Our fully equipped workshop in Mokopane has state-of-the-art tools
+              and equipment to handle all types of vehicle repairs and
+              maintenance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Mining Services Section -->
+    <section id="mining" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
+            Mining Support Services
+          </h2>
+          <div class="w-24 h-1.5 bg-yellow-500 mx-auto mb-8"></div>
+          <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+            Specialized support and industrial solutions tailored for the mining
+            sector, including underground works and conveyor maintenance.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+          <div>
+            <div class="flex items-center mb-6">
+              <div
+                class="bg-blue-900 text-white w-16 h-16 rounded-full flex items-center justify-center mr-6"
+              >
+                <i class="fas fa-mountain text-2xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-blue-900">
+                Underground Works
+              </h3>
+            </div>
+
+            <ul class="space-y-4 text-gray-700">
+              <li class="flex items-start">
+                <div
+                  class="bg-yellow-100 text-yellow-700 rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0"
+                >
+                  <i class="fas fa-check"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-blue-900">Dyke Drilling</h4>
+                  <p>
+                    Specialized drilling services for mining dykes and
+                    underground structures.
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="bg-yellow-100 text-yellow-700 rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0"
+                >
+                  <i class="fas fa-check"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-blue-900">Support Works</h4>
+                  <p>
+                    Underground support systems installation and maintenance for
+                    mining safety.
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="bg-yellow-100 text-yellow-700 rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0"
+                >
+                  <i class="fas fa-check"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-blue-900">Conveyor Maintenance</h4>
+                  <p>
+                    Regular maintenance and repair of mining conveyor systems
+                    for optimal operation.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="flex items-center mb-6">
+              <div
+                class="bg-yellow-500 text-blue-900 w-16 h-16 rounded-full flex items-center justify-center mr-6"
+              >
+                <i class="fas fa-hard-hat text-2xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-blue-900">
+                Specialized Mining Services
+              </h3>
+            </div>
+
+            <ul class="space-y-4 text-gray-700">
+              <li class="flex items-start">
+                <div
+                  class="bg-blue-100 text-blue-700 rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0"
+                >
+                  <i class="fas fa-check"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-blue-900">Belt Sweeping</h4>
+                  <p>
+                    Side-by-side belt sweeping and O.S from belt maintenance
+                    services.
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="bg-blue-100 text-blue-700 rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0"
+                >
+                  <i class="fas fa-check"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-blue-900">Ventilation Systems</h4>
+                  <p>
+                    Construction and maintenance of ventilation walls and
+                    systems for mining operations.
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="bg-blue-100 text-blue-700 rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0"
+                >
+                  <i class="fas fa-check"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-blue-900">Mining Infrastructure</h4>
+                  <p>
+                    Complete infrastructure solutions for mining operations,
+                    including water systems.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Image Placeholder 6 - Mining Projects -->
+        <div class="rounded-xl h-96 w-full mb-8 overflow-hidden">
+          <img
+            src="/images/18.jpg"
+            alt="Mining Projects Photos"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Mining Clients -->
+        <div class="bg-blue-900 text-white p-8 rounded-xl">
+          <h3 class="text-2xl font-bold mb-6 text-center">
+            Mining Sector Clients
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h4 class="text-xl font-bold mb-4 text-yellow-400">
+                Anglo Mogalakwena Mine
+              </h4>
+              <ul class="space-y-3 text-gray-300">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                  <span>Plant Hire Services</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                  <span>Equipment Supply & Maintenance</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-yellow-400 mt-1 mr-3"></i>
+                  <span>Infrastructure Support</span>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-xl font-bold mb-4 text-yellow-400">
+                Other Mining Clients
+              </h4>
+              <p class="text-gray-300 mb-4">
+                We provide specialized services to various mining operations in
+                the Limpopo region, focusing on safety, efficiency, and
+                reliability.
+              </p>
+              <div class="flex items-center text-gray-300">
+                <i class="fas fa-phone-alt text-yellow-400 mr-3"></i>
+                <span>Contact us for mining service inquiries</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Request CTA -->
+    <section
+      class="py-16 bg-gradient-to-r from-blue-900 to-blue-800 text-white"
+    >
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Need Our Services?</h2>
+        <p class="text-xl mb-10 max-w-2xl mx-auto">
+          Contact us today for a free consultation or emergency service request.
+        </p>
+        <div
+          class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6"
+        >
+          <a
+            href="contact.html"
+            class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition duration-300 flex items-center"
+          >
+            <i class="fas fa-file-alt mr-3"></i> Request a Quote
+          </a>
+          <a
+            href="tel:+271834838028"
+            class="bg-transparent border-2 border-yellow-500 hover:bg-yellow-500 hover:bg-opacity-10 text-white font-bold py-4 px-8 rounded-lg text-lg transition duration-300 flex items-center"
+          >
+            <i class="fas fa-phone mr-3"></i> Call Now: 015 483 8028
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white pt-16 pb-8">
+      <div class="container mx-auto px-4">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12"
+        >
+          <!-- Company Info -->
+          <div>
+            <h3 class="text-2xl font-bold mb-6">
+              <span class="text-yellow-400">KOKETJO KAMOGELO</span><br />
+              TRADING ENTERPRISE
+            </h3>
+            <p class="text-gray-300 mb-6">
+              Professional multi-service solutions you can depend on 24/7.
+              Serving Mokopane and surrounding regions since 2016.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="bg-blue-800 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="bg-blue-800 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="#"
+                class="bg-blue-800 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-xl font-bold mb-6 text-yellow-400">Quick Links</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-300 hover:text-yellow-400 transition duration-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-300 hover:text-yellow-400 transition duration-300"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-gray-300 hover:text-yellow-400 transition duration-300"
+                  >Our Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-300 hover:text-yellow-400 transition duration-300"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-yellow-400 transition duration-300"
+                  >Careers</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h3 class="text-xl font-bold mb-6 text-yellow-400">Our Services</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#construction"
+                  class="text-gray-300 hover:text-yellow-400 transition duration-300"
+                  >Construction & Civil Works</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#electrical"
+                  class="text-gray-300 hover:text-yellow-400 transition duration-300"
+                  >Electrical Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#mechanical"
+                  class="text-gray-300 hover:text-yellow-400 transition duration-300"
+                  >Mechanical & Towing</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#piping"
+                  class="text-gray-300 hover:text-yellow-400 transition duration-300"
+                  >Industrial Piping</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#mining"
+                  class="text-gray-300 hover:text-yellow-400 transition duration-300"
+                  >Mining Services</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-xl font-bold mb-6 text-yellow-400">Contact Info</h3>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <i class="fas fa-map-marker-alt text-yellow-400 mt-1 mr-3"></i>
+                <p class="text-gray-300">
+                  769 N11 Street, Tshamahansi, Mokopane, 0600
+                </p>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-envelope text-yellow-400 mr-3"></i>
+                <p class="text-gray-300">info@kktradingenterprise.co.za</p>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-phone text-yellow-400 mr-3"></i>
+                <p class="text-gray-300">015 483 8028</p>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-clock text-yellow-400 mr-3"></i>
+                <p class="text-gray-300">24/7 Emergency Assistance Available</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-blue-800 pt-8 text-center">
+          <p class="text-gray-400">
+            &copy; 2026 Koketjo Kamogelo Trading Enterprise (Pty) Ltd. All
+            Rights Reserved.
+          </p>
+          <p class="text-gray-500 text-sm mt-2">
+            Proudly serving Mokopane and surrounding communities since 2016.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript for Hamburger Menu -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        hamburgerBtn.addEventListener("click", function () {
+          // Toggle mobile menu
+          mobileMenu.classList.toggle("open");
+
+          // Toggle hamburger animation
+          hamburgerBtn.classList.toggle("active");
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileLinks = document.querySelectorAll("#mobile-menu a");
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.remove("open");
+            hamburgerBtn.classList.remove("active");
+          });
+        });
+
+        // Smooth scrolling for service navigation links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            const targetId = this.getAttribute("href");
+            if (targetId === "#" || targetId.includes(".html")) return;
+
+            e.preventDefault();
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: "smooth",
+              });
+
+              // Close mobile menu if open
+              mobileMenu.classList.remove("open");
+              hamburgerBtn.classList.remove("active");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
