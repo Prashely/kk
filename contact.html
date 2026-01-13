@@ -122,7 +122,7 @@
               >Contact</a
             >
             <a
-              href="tel:+271834838028"
+              href="tel:+27154838028"
               class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center"
             >
               <i class="fas fa-phone mr-2"></i> 24/7 EMERGENCY
@@ -164,7 +164,7 @@
               >Contact</a
             >
             <a
-              href="tel:+271834838028"
+              href="tel:+27154838028"
               class="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center mt-4"
             >
               <i class="fas fa-phone mr-2"></i> 24/7 EMERGENCY CALL
@@ -176,7 +176,14 @@
 
     <!-- Page Hero Section -->
     <section
-      class="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-16 md:py-20"
+      class="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-16 md:py-20 bg-cover bg-bottom"
+      style="
+        background-image: linear-gradient(
+            rgba(0, 51, 102, 0.8),
+            rgba(30, 58, 138, 0.8)
+          ),
+          url('images/20.jpeg');
+      "
     >
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center">
@@ -212,7 +219,7 @@
               </p>
               <div class="space-y-4">
                 <a
-                  href="tel:+271834838028"
+                  href="tel:+27154838028"
                   class="block bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-6 rounded-lg transition duration-300"
                 >
                   <i class="fas fa-phone mr-3"></i> 015 483 8028
@@ -336,7 +343,9 @@
                       class="fas fa-map-marker-alt text-yellow-400 text-xl mr-4 mt-1"
                     ></i>
                     <div>
-                      <p class="font-bold">Iliis Go-Matjeke Tshamahansi NII</p>
+                      <p class="font-bold">
+                        769 N11 Street, Tshamahansi, Mokopane
+                      </p>
                       <p class="text-gray-300">Mokopane, Limpopo Province</p>
                       <p class="text-gray-300">South Africa</p>
                     </div>
@@ -455,41 +464,15 @@
             <!-- Map Container -->
             <div class="map-container shadow-lg">
               <!-- Replace with your actual Google Maps embed code -->
-              <div
-                class="map-placeholder w-full h-full flex flex-col items-center justify-center"
-              >
-                <i
-                  class="fas fa-map-marked-alt text-5xl mb-4 text-gray-400"
-                ></i>
-                <p class="text-lg font-medium">Mokopane Location Map</p>
-                <p class="text-sm text-gray-500 mt-2">Google Maps Embed</p>
-
-                <!-- Instructions for adding actual map -->
-                <div class="mt-6 p-4 bg-blue-50 rounded-lg max-w-md text-left">
-                  <p class="text-sm text-blue-800 font-medium mb-2">
-                    To add your actual map:
-                  </p>
-                  <ol class="text-xs text-gray-600 list-decimal pl-5 space-y-1">
-                    <li>Go to Google Maps and find your location</li>
-                    <li>Click "Share" → "Embed a map"</li>
-                    <li>Copy the iframe code</li>
-                    <li>Replace this placeholder with the iframe code</li>
-                  </ol>
-                </div>
-              </div>
-
-              <!-- Sample iframe (commented out) -->
-              <!-- 
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3586.123456789012!2d28.987654321!3d-24.123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDA3JzI0LjQiUyAyOMKwNTknMTUuNiJF!5e0!3m2!1sen!2sza!4v1234567890123!5m2!1sen!2sza" 
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                        -->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3642.3190350145683!2d28.966864174309393!3d-24.090273581234452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec74b67a8029975%3A0x9b7fc8a5fce1baf0!2sKK%20Trading%20Enterprise!5e0!3m2!1sen!2sza!4v1768283248571!5m2!1sen!2sza"
+                width="100%"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
 
             <div class="mt-6 text-center">
@@ -502,42 +485,6 @@
                 Maps
               </a>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Emergency Banner -->
-    <section class="bg-gradient-to-r from-red-600 to-red-700 text-white py-8">
-      <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="flex items-center mb-4 md:mb-0">
-            <div
-              class="bg-white text-red-600 w-12 h-12 rounded-full flex items-center justify-center mr-4"
-            >
-              <i class="fas fa-exclamation-triangle text-2xl"></i>
-            </div>
-            <div>
-              <h3 class="text-xl font-bold">24/7 Emergency Service</h3>
-              <p>
-                For urgent towing, roadside assistance, and emergency repairs
-              </p>
-            </div>
-          </div>
-          <div class="flex space-x-4">
-            <a
-              href="tel:+271834838028"
-              class="bg-white hover:bg-gray-100 text-red-700 font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center"
-            >
-              <i class="fas fa-phone mr-3"></i> Call Now
-            </a>
-            <a
-              href="https://wa.me/271834838028?text=EMERGENCY%20ASSISTANCE%20NEEDED"
-              target="_blank"
-              class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center"
-            >
-              <i class="fab fa-whatsapp mr-3"></i> WhatsApp
-            </a>
           </div>
         </div>
       </div>
@@ -559,26 +506,6 @@
               Professional multi-service solutions you can depend on 24/7.
               Serving Mokopane and surrounding regions since 2016.
             </p>
-            <div class="flex space-x-4">
-              <a
-                href="#"
-                class="bg-blue-800 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                href="#"
-                class="bg-blue-800 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center"
-              >
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a
-                href="#"
-                class="bg-blue-800 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center"
-              >
-                <i class="fab fa-twitter"></i>
-              </a>
-            </div>
           </div>
 
           <!-- Quick Links -->
@@ -697,7 +624,7 @@
             Rights Reserved.
           </p>
           <p class="text-gray-500 text-sm mt-2">
-            Proudly serving Mokopane and surrounding communities since 2016.
+            Precision Designs Agency - precisiondesignsagency.com
           </p>
         </div>
       </div>
